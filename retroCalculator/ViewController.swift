@@ -7,18 +7,72 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    //Enum creates a variable type
+    
+    enum Operation: String {
+        case Divide = "/"
+        case Multiple = "*"
+        case Subtract = "-"
+        case Add = "+"
+        case Equal = "="
+        case Empty = "Empty"
+    }
+    
+    @IBOutlet weak var outputLabel: UILabel!
+    
+    var btnSound: AVAudioPlayer!
+    
+    var runningNumber = ""
+    var leftValStr = ""
+    var rightValStr = ""
+    var currentOperation: Operation = Operation.Empty
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Button press sound
+        
+        let path = NSBundle.mainBundle().pathForResource("btn", ofType: "wav")
+        let soundUrl = NSURL(fileURLWithPath: path!)
+        
+        do {
+            try btnSound = AVAudioPlayer(contentsOfURL: soundUrl)
+            btnSound.prepareToPlay()
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
+    
+    
+    @IBAction func numberPressed(btn: UIButton!) {
+        btnSound.play()
+        
+        runningNumber += "\(btn.tag)"
+    }
+    
+    // Button Pressed IBActions
+    
+    @IBAction func onDividePressed(sender: AnyObject) {
+    }
+    @IBAction func onMultiplyPressed(sender: AnyObject) {
+    }
+    @IBAction func onSubtractPressed(sender: AnyObject) {
+    }
+    @IBAction func onAddPressed(sender: AnyObject) {
+    }
+    @IBAction func onEqualPressed(sender: AnyObject) {
+    }
+    
 
 
 }
