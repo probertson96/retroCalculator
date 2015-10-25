@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Minecraft.ttf">
+            <string>Minecraft</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -218,11 +223,10 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4df-oo-yT3">
-                                <rect key="frame" x="191" y="70" width="221" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5734" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4df-oo-yT3">
+                                <rect key="frame" x="210" y="70" width="200" height="49"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -233,6 +237,8 @@
                             <constraint firstItem="McN-4n-RGq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Blm-9J-k0c"/>
                             <constraint firstAttribute="trailing" secondItem="McN-4n-RGq" secondAttribute="trailing" id="JzY-4p-lea"/>
                             <constraint firstItem="20g-W2-864" firstAttribute="centerX" secondItem="Yad-6K-svb" secondAttribute="centerX" id="KLg-4A-ECO"/>
+                            <constraint firstItem="4df-oo-yT3" firstAttribute="top" secondItem="Yad-6K-svb" secondAttribute="top" id="VZM-wc-bde"/>
+                            <constraint firstItem="4df-oo-yT3" firstAttribute="trailing" secondItem="Yad-6K-svb" secondAttribute="trailing" id="VaI-NW-EG6"/>
                             <constraint firstItem="McN-4n-RGq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="epA-Ra-g78"/>
                             <constraint firstItem="20g-W2-864" firstAttribute="centerY" secondItem="Yad-6K-svb" secondAttribute="centerY" constant="27" id="jJL-gd-LL6"/>
                             <constraint firstItem="Yad-6K-svb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rcH-j4-CLJ"/>
